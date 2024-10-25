@@ -1,0 +1,78 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    public:
+    int roll,i,n;
+    string name,sub[10];
+    void accept()
+    {
+        cout<<"Enter name:";
+        cin>>name;
+        cout<<"Enter roll no:";
+        cin>>roll;
+        cout<<"Enter no.of subject:";
+        cin>>n;
+        cout<<"Enter name of subject:"<<endl;
+        for(i=0;i<n;i++)
+        {
+            cout<<i+1<<")";
+            cin>>sub[i];
+        }
+        
+    }
+};
+class data:public student
+{
+    public:
+    int internal=0,External=0,assign[10],j;
+    void acceptMarks()
+    {
+    for(i=0;i<n;i++)
+    {
+        cout<<i+1<<"]"<<sub[i]<<":"<<endl;
+        cout<<"Enter marks for each assignment:"<<endl;
+        for(j=0;j<3;j++)
+        {
+            cout<<"\t"<<j+1<<"Assignment-"<<j+1<<"]";
+            cin>>assign[j];
+        }
+        cout<<"Enter External Marks:";
+        cin>>External;
+    }
+    
+    }
+    void cal()
+    {
+        for(i=0;i<3;i++)
+        {
+            internal+=assign[i];
+        }
+        internal=(internal*100)/30;
+    }
+    void display(sr)
+    {
+        cout<<sr<<"\t"<<roll<<"\t"<<name<<"\t";
+        for(i=0;i<3;i++)
+    }
+        
+    
+};
+int main()
+{
+    class data d;
+    d.accept();
+    d.acceptMarks();
+    
+}
+
+
+
+
+
+
+
+
+
+
+
